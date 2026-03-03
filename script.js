@@ -105,3 +105,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+const slidesImages = document.querySelectorAll(".slide");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeModal = document.querySelector(".close-modal");
+
+slidesImages.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  });
+});
+
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+modal.onclick = function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+}
