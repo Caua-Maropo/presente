@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   audio.addEventListener("timeupdate", () => {
+    progress.style.background = `linear-gradient(to right, white ${(audio.currentTime / audio.duration) * 100}%, #555 ${(audio.currentTime / audio.duration) * 100}%)`;
     progress.value = audio.currentTime;
     currentTimeEl.textContent = formatTime(audio.currentTime);
   });
