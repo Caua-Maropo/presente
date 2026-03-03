@@ -7,18 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentTimeEl = document.getElementById("current-time");
   const durationEl = document.getElementById("duration");
 
-  let isPlaying = false;
-
-  playBtn.addEventListener("click", () => {
-    if (isPlaying) {
-      audio.pause();
-      playBtn.textContent = "▶";
-    } else {
-      audio.play();
-      playBtn.textContent = "⏸";
-    }
-    isPlaying = !isPlaying;
-  });
+ playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "⏸";
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶";
+  }
+});
 
   audio.addEventListener("loadedmetadata", () => {
     progress.max = audio.duration;
