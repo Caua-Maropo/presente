@@ -109,20 +109,55 @@ const slidesImages = document.querySelectorAll(".slide");
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 const closeModal = document.querySelector(".close-modal");
+const nextBtn = document.querySelector(".modal-next");
+const prevBtn = document.querySelector(".modal-prev");
 
-slidesImages.forEach(img => {
+let currentIndex = 0;
+
+// Abrir modal
+slidesImages.forEach((img, index) => {
   img.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalImg.src = img.src;
+    modal.style.display = "flex";
+    currentIndex = index;
+    modalImg.src = slidesImages[currentIndex].src;
   });
 });
 
-closeModal.onclick = function() {
+// Fechar
+closeModal.onclick = () => {
   modal.style.display = "none";
+};
+
+// Navegação
+function showImage(index) {
+  if (index >= slidesImages.length) currentIndex = 0;
+  else if (index < 0) currentIndex = slidesImages.length - 1;
+  else currentIndex = index;
+
+  modalImg.src = slidesImages[currentIndex].src;
 }
 
-modal.onclick = function(e) {
+nextBtn.onclick = () => showImage(currentIndex + 1);
+prevBtn.onclick = () => showImage(currentIndex - 1);
+
+// Swipe mobile
+let startX = 0;
+
+modal.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+modal.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  let diff = startX - endX;
+
+  if (diff > 50) showImage(currentIndex + 1);
+  if (diff < -50) showImage(currentIndex - 1);
+});
+
+// Fechar clicando fora
+modal.addEventListener("click", e => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
-}
+});
