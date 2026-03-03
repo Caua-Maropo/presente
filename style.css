@@ -220,73 +220,86 @@ body {
   }
 }
 /* =========================
-   MOBILE REAL APP STYLE
+   MOBILE - SPOTIFY FULL
 ========================= */
 @media (max-width: 600px) {
 
   body {
     justify-content: flex-start;
+    background: black; /* fundo escuro estilo Spotify */
   }
 
   .top-message {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 20px;
-    padding: 0 20px;
+    padding: 0 25px;
   }
 
   .player-container {
-    flex: unset;
     width: 100%;
-    padding: 0;
+    flex: unset;
   }
 
   .card {
     max-width: 100%;
     width: 100%;
-    padding: 25px 20px 40px 20px;
+    height: 100vh;
+    padding: 30px 25px 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
+  /* IMAGEM ESTILO CAPA GRANDE */
   .slide {
-    height: 380px;   /* 🔥 bem maior */
-    border-radius: 25px;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  }
+
+  .music-info {
+    margin-top: 35px;
   }
 
   .music-info h2 {
-    font-size: 26px;  /* maior */
-    margin-top: 30px;
+    font-size: 28px;
   }
 
   .music-info p {
-    font-size: 18px;  /* maior */
+    font-size: 18px;
+    opacity: 0.8;
   }
 
   .progress-container {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 16px;
   }
 
   #progress {
-    height: 8px;   /* barra mais grossa */
+    height: 8px;
+    background: #333;
   }
 
   .controls {
-    margin-top: 35px;
-    gap: 40px;
+    margin-top: 40px;
+    gap: 50px;
   }
 
   .controls button {
-    font-size: 28px;   /* maior */
+    font-size: 30px;
   }
 
   #play {
-    width: 75px;
-    height: 75px;
-    font-size: 28px;
+    width: 85px;
+    height: 85px;
+    font-size: 30px;
   }
 
   .bottom-message {
-    font-size: 18px;
-    padding: 20px;
+    margin-top: auto;
+    font-size: 16px;
+    padding: 20px 0;
+    text-align: center;
+    opacity: 0.8;
   }
-
 }
