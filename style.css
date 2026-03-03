@@ -302,3 +302,46 @@ body {
     opacity: 0.8;
   }
 }
+/* =========================
+   MOBILE - AJUSTE PORTRAIT
+========================= */
+@media (max-width: 600px) and (orientation: portrait) {
+
+  .card {
+    justify-content: flex-start;   /* sobe tudo */
+    padding-top: 20px;
+  }
+
+  .slide {
+    height: 340px;   /* menor que 420 */
+  }
+
+  .music-info {
+    margin-top: 18px;
+  }
+
+  .music-info h2 {
+    font-size: 24px;
+  }
+
+  .music-info p {
+    font-size: 16px;
+  }
+
+  .progress-container {
+    margin-top: 18px;
+  }
+
+  .controls {
+    margin-top: 25px;
+  }
+
+  #play {
+    width: 75px;
+    height: 75px;
+  }
+
+  .bottom-message {
+    margin-top: 25px;
+  }
+}
