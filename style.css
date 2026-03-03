@@ -200,25 +200,6 @@ body {
   transform: scale(1.1);
 }
 
-/* ================= RESPONSIVO ================= */
-
-@media (max-width: 480px) {
-  .card {
-    padding: 15px;
-  }
-
-  .music-info h2 {
-    font-size: 22px;
-  }
-
-  .music-info p {
-    font-size: 15px;
-  }
-
-  .slide {
-    height: 300px;
-  }
-}
 /* =========================
    MOBILE - SPOTIFY FULL
 ========================= */
@@ -247,7 +228,8 @@ body {
   padding: 30px 25px 40px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
+  justify-content: flex-start; /* centraliza verticalmente */
+  gap: 20px;
 }
   /* IMAGEM ESTILO CAPA GRANDE */
   .slide {
