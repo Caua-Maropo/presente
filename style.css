@@ -295,7 +295,7 @@ body {
   }
 
   .slide {
-    height: 340px;   /* menor que 420 */
+    height: 200px;   /* menor que 420 */
   }
 
   .music-info {
