@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossa Música ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="player-container">
+
+    <div class="card">
+      <div class="image-wrapper">
+        <img src="foto.jpg" alt="Foto do casal">
+        <div class="overlay-text">
+          Nossa história é a minha favorita ❤️
+        </div>
+      </div>
+
+      <div class="music-info">
+        <h2>Sonha Comigo</h2>
+        <p>Zé Neto & Cristiano</p>
+      </div>
+
+      <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" value="0">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play">▶</button>
+        <button id="next">⏭</button>
+      </div>
+
+      <audio id="audio" src="musica.mp3"></audio>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
