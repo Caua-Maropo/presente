@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #ff6a88, #ff99ac);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.player-container {
+  width: 90%;
+  max-width: 380px;
+}
+
+.card {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.music-info h2 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.music-info p {
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+#progress {
+  flex: 1;
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.controls button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.15);
+}
