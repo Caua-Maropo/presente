@@ -240,16 +240,15 @@ body {
     flex: unset;
   }
 
-  .card {
-    max-width: 100%;
-    width: 100%;
-    height: 100vh;
-    padding: 30px 25px 40px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
+ .card {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh; /* em vez de height fixo */
+  padding: 30px 25px 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+}
   /* IMAGEM ESTILO CAPA GRANDE */
   .slide {
     height: 420px;
@@ -258,7 +257,7 @@ body {
   }
 
   .music-info {
-    margin-top: 35px;
+    margin-top: 25px;
   }
 
   .music-info h2 {
@@ -281,7 +280,7 @@ body {
   }
 
   .controls {
-    margin-top: 40px;
+    margin-top: 30px;
     gap: 50px;
   }
 
