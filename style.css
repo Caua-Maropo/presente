@@ -109,6 +109,12 @@ body {
 .slide {
   min-width: 100%;
   border-radius: 20px;
+  animation: zoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
 }
 
 .slide.active {
@@ -147,4 +153,17 @@ body {
 
 .dot.active {
   background-color: white;
+}
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .music-info h2 {
+    font-size: 18px;
+  }
+
+  .controls button {
+    padding: 10px;
+  }
 }
